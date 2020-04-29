@@ -18,7 +18,7 @@
 
 #include "dataStructures.h"
 
-void visualizeResults(cv::Mat img, vector<cv::KeyPoint> &keypoints, string name);
+void visualizeResults(cv::Mat img, std::vector<cv::KeyPoint> &keypoints, string name);
 
 void detKeypointsHarris(std::vector<cv::KeyPoint> &keypoints, cv::Mat &img, bool bVis=false);
 void detKeypointsShiTomasi(std::vector<cv::KeyPoint> &keypoints, cv::Mat &img, bool bVis=false);
