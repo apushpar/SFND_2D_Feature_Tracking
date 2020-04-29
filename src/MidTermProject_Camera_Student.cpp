@@ -16,6 +16,8 @@
 #include "dataStructures.h"
 #include "matching2D.hpp"
 
+#include <queue> 
+
 using namespace std;
 
 /* MAIN PROGRAM */
@@ -37,7 +39,8 @@ int main(int argc, const char *argv[])
 
     // misc
     int dataBufferSize = 2;       // no. of images which are held in memory (ring buffer) at the same time
-    vector<DataFrame> dataBuffer; // list of data frames which are held in memory at the same time
+    // vector<DataFrame> dataBuffer; // list of data frames which are held in memory at the same time
+    queue<DataFrame> dataBuffer; // list of data frames which are held in memory at the same time
     bool bVis = false;            // visualize results
 
     /* MAIN LOOP OVER ALL IMAGES */
@@ -58,11 +61,15 @@ int main(int argc, const char *argv[])
 
         //// STUDENT ASSIGNMENT
         //// TASK MP.1 -> replace the following code with ring buffer of size dataBufferSize
-
+        // using a queue instead of a vector -> efficient way of removinf the first element if size of buffer greater than 2.
         // push image into data frame buffer
         DataFrame frame;
         frame.cameraImg = imgGray;
-        dataBuffer.push_back(frame);
+        dataBuffer.push(frame);
+        if (dataBuffer.size() > 2)
+        {
+            dataBuffer.pop();
+        }
 
         //// EOF STUDENT ASSIGNMENT
         cout << "#1 : LOAD IMAGE INTO BUFFER done" << endl;
@@ -81,10 +88,17 @@ int main(int argc, const char *argv[])
         {
             detKeypointsShiTomasi(keypoints, imgGray, false);
         }
-        else
+        else if (detectorType.compare("HARRIS") == 0)
         {
             //...
+            detKeypointsHarris(keypoints, imgGray, false);
         }
+        else
+        {
+            detKeypointsModern(keypoints, imgGray, detectorType, false);
+        }
+        
+        
         //// EOF STUDENT ASSIGNMENT
 
         //// STUDENT ASSIGNMENT
