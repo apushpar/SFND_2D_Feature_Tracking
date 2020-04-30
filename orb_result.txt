@@ -1,0 +1,107 @@
+#1 : LOAD IMAGE INTO BUFFER done
+ORB detection with n=500 keypoints in 13.4825 ms
+org keypoints size: 500
+Filtered keypoints size: 92
+New keypoints size: 92
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 2.00892 ms
+#3 : EXTRACT DESCRIPTORS done
+#1 : LOAD IMAGE INTO BUFFER done
+ORB detection with n=500 keypoints in 8.45051 ms
+org keypoints size: 500
+Filtered keypoints size: 102
+New keypoints size: 102
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.32176 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/ORB0001.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+ORB detection with n=500 keypoints in 8.27202 ms
+org keypoints size: 500
+Filtered keypoints size: 106
+New keypoints size: 106
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.31386 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/ORB0002.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+ORB detection with n=500 keypoints in 7.17142 ms
+org keypoints size: 500
+Filtered keypoints size: 113
+New keypoints size: 113
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.38019 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/ORB0003.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+ORB detection with n=500 keypoints in 8.21725 ms
+org keypoints size: 500
+Filtered keypoints size: 109
+New keypoints size: 109
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.47724 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/ORB0004.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+ORB detection with n=500 keypoints in 7.95677 ms
+org keypoints size: 500
+Filtered keypoints size: 125
+New keypoints size: 125
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.58835 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/ORB0005.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+ORB detection with n=500 keypoints in 7.72219 ms
+org keypoints size: 500
+Filtered keypoints size: 130
+New keypoints size: 130
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.6222 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/ORB0006.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+ORB detection with n=500 keypoints in 7.70427 ms
+org keypoints size: 500
+Filtered keypoints size: 129
+New keypoints size: 129
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.70366 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/ORB0007.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+ORB detection with n=500 keypoints in 7.74572 ms
+org keypoints size: 500
+Filtered keypoints size: 127
+New keypoints size: 127
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.7695 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/ORB0008.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+ORB detection with n=500 keypoints in 8.67591 ms
+org keypoints size: 500
+Filtered keypoints size: 128
+New keypoints size: 128
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.67343 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/ORB0009.bmp
+Press key to continue to next image

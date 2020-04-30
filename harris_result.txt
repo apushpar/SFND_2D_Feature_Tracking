@@ -1,0 +1,107 @@
+#1 : LOAD IMAGE INTO BUFFER done
+Harris detection with n=115 keypoints in 23.1482 ms
+org keypoints size: 115
+Filtered keypoints size: 17
+New keypoints size: 17
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 0.602283 ms
+#3 : EXTRACT DESCRIPTORS done
+#1 : LOAD IMAGE INTO BUFFER done
+Harris detection with n=98 keypoints in 17.9074 ms
+org keypoints size: 98
+Filtered keypoints size: 14
+New keypoints size: 14
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.30623 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/HARRIS0001.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+Harris detection with n=113 keypoints in 18.6883 ms
+org keypoints size: 113
+Filtered keypoints size: 18
+New keypoints size: 18
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.31054 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/HARRIS0002.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+Harris detection with n=121 keypoints in 17.8838 ms
+org keypoints size: 121
+Filtered keypoints size: 21
+New keypoints size: 21
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.43705 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/HARRIS0003.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+Harris detection with n=160 keypoints in 17.1465 ms
+org keypoints size: 160
+Filtered keypoints size: 26
+New keypoints size: 26
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.41866 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/HARRIS0004.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+Harris detection with n=383 keypoints in 30.9704 ms
+org keypoints size: 383
+Filtered keypoints size: 43
+New keypoints size: 43
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.5386 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/HARRIS0005.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+Harris detection with n=85 keypoints in 16.3689 ms
+org keypoints size: 85
+Filtered keypoints size: 18
+New keypoints size: 18
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.46669 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/HARRIS0006.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+Harris detection with n=210 keypoints in 19.8935 ms
+org keypoints size: 210
+Filtered keypoints size: 31
+New keypoints size: 31
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.40278 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/HARRIS0007.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+Harris detection with n=171 keypoints in 17.9826 ms
+org keypoints size: 171
+Filtered keypoints size: 26
+New keypoints size: 26
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.40792 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/HARRIS0008.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+Harris detection with n=281 keypoints in 22.5437 ms
+org keypoints size: 281
+Filtered keypoints size: 34
+New keypoints size: 34
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.66035 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/HARRIS0009.bmp
+Press key to continue to next image

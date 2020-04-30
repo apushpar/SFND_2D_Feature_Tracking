@@ -1,0 +1,107 @@
+#1 : LOAD IMAGE INTO BUFFER done
+BRISK detection with n=2757 keypoints in 376.301 ms
+org keypoints size: 2757
+Filtered keypoints size: 264
+New keypoints size: 264
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 3.97013 ms
+#3 : EXTRACT DESCRIPTORS done
+#1 : LOAD IMAGE INTO BUFFER done
+BRISK detection with n=2777 keypoints in 368.534 ms
+org keypoints size: 2777
+Filtered keypoints size: 282
+New keypoints size: 282
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 3.24183 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/BRISK0001.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+BRISK detection with n=2741 keypoints in 367.443 ms
+org keypoints size: 2741
+Filtered keypoints size: 282
+New keypoints size: 282
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 3.07897 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/BRISK0002.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+BRISK detection with n=2735 keypoints in 368.116 ms
+org keypoints size: 2735
+Filtered keypoints size: 277
+New keypoints size: 277
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 3.18127 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/BRISK0003.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+BRISK detection with n=2757 keypoints in 367.756 ms
+org keypoints size: 2757
+Filtered keypoints size: 297
+New keypoints size: 297
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 3.30156 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/BRISK0004.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+BRISK detection with n=2695 keypoints in 365.866 ms
+org keypoints size: 2695
+Filtered keypoints size: 279
+New keypoints size: 279
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 3.17319 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/BRISK0005.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+BRISK detection with n=2715 keypoints in 365.358 ms
+org keypoints size: 2715
+Filtered keypoints size: 289
+New keypoints size: 289
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 3.21869 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/BRISK0006.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+BRISK detection with n=2628 keypoints in 370.432 ms
+org keypoints size: 2628
+Filtered keypoints size: 272
+New keypoints size: 272
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 3.04021 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/BRISK0007.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+BRISK detection with n=2639 keypoints in 365.299 ms
+org keypoints size: 2639
+Filtered keypoints size: 266
+New keypoints size: 266
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 2.94277 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/BRISK0008.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+BRISK detection with n=2672 keypoints in 365.37 ms
+org keypoints size: 2672
+Filtered keypoints size: 254
+New keypoints size: 254
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 2.994 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/BRISK0009.bmp
+Press key to continue to next image

@@ -1,0 +1,107 @@
+#1 : LOAD IMAGE INTO BUFFER done
+FAST detection with n=1824 keypoints in 1.26539 ms
+org keypoints size: 1824
+Filtered keypoints size: 149
+New keypoints size: 149
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 2.89514 ms
+#3 : EXTRACT DESCRIPTORS done
+#1 : LOAD IMAGE INTO BUFFER done
+FAST detection with n=1832 keypoints in 1.06836 ms
+org keypoints size: 1832
+Filtered keypoints size: 152
+New keypoints size: 152
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 2.5845 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/FAST0001.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+FAST detection with n=1810 keypoints in 1.41457 ms
+org keypoints size: 1810
+Filtered keypoints size: 150
+New keypoints size: 150
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 2.77413 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/FAST0002.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+FAST detection with n=1817 keypoints in 0.912113 ms
+org keypoints size: 1817
+Filtered keypoints size: 155
+New keypoints size: 155
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.80646 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/FAST0003.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+FAST detection with n=1793 keypoints in 0.981482 ms
+org keypoints size: 1793
+Filtered keypoints size: 149
+New keypoints size: 149
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.76718 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/FAST0004.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+FAST detection with n=1796 keypoints in 1.06173 ms
+org keypoints size: 1796
+Filtered keypoints size: 149
+New keypoints size: 149
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 2.01538 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/FAST0005.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+FAST detection with n=1788 keypoints in 1.04322 ms
+org keypoints size: 1788
+Filtered keypoints size: 156
+New keypoints size: 156
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.82774 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/FAST0006.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+FAST detection with n=1695 keypoints in 1.04108 ms
+org keypoints size: 1695
+Filtered keypoints size: 150
+New keypoints size: 150
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.74105 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/FAST0007.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+FAST detection with n=1749 keypoints in 1.05984 ms
+org keypoints size: 1749
+Filtered keypoints size: 138
+New keypoints size: 138
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 1.71714 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/FAST0008.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+FAST detection with n=1770 keypoints in 1.26671 ms
+org keypoints size: 1770
+Filtered keypoints size: 143
+New keypoints size: 143
+#2 : DETECT KEYPOINTS done
+BRISK descriptor extraction in 2.71366 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/FAST0009.bmp
+Press key to continue to next image

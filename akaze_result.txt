@@ -1,0 +1,107 @@
+#1 : LOAD IMAGE INTO BUFFER done
+AKAZE detection with n=1826 keypoints in 455.765 ms
+org keypoints size: 1826
+Filtered keypoints size: 206
+New keypoints size: 206
+#2 : DETECT KEYPOINTS done
+AKAZE descriptor extraction in 87.0862 ms
+#3 : EXTRACT DESCRIPTORS done
+#1 : LOAD IMAGE INTO BUFFER done
+AKAZE detection with n=1804 keypoints in 439.295 ms
+org keypoints size: 1804
+Filtered keypoints size: 184
+New keypoints size: 184
+#2 : DETECT KEYPOINTS done
+AKAZE descriptor extraction in 98.2136 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/AKAZE0001.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+AKAZE detection with n=1772 keypoints in 450.174 ms
+org keypoints size: 1772
+Filtered keypoints size: 197
+New keypoints size: 197
+#2 : DETECT KEYPOINTS done
+AKAZE descriptor extraction in 83.5188 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/AKAZE0002.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+AKAZE detection with n=1795 keypoints in 432.235 ms
+org keypoints size: 1795
+Filtered keypoints size: 193
+New keypoints size: 193
+#2 : DETECT KEYPOINTS done
+AKAZE descriptor extraction in 81.2135 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/AKAZE0003.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+AKAZE detection with n=1782 keypoints in 456.197 ms
+org keypoints size: 1782
+Filtered keypoints size: 199
+New keypoints size: 199
+#2 : DETECT KEYPOINTS done
+AKAZE descriptor extraction in 79.9601 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/AKAZE0004.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+AKAZE detection with n=1751 keypoints in 451.035 ms
+org keypoints size: 1751
+Filtered keypoints size: 193
+New keypoints size: 193
+#2 : DETECT KEYPOINTS done
+AKAZE descriptor extraction in 78.8751 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/AKAZE0005.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+AKAZE detection with n=1756 keypoints in 436.403 ms
+org keypoints size: 1756
+Filtered keypoints size: 207
+New keypoints size: 207
+#2 : DETECT KEYPOINTS done
+AKAZE descriptor extraction in 86.2888 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/AKAZE0006.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+AKAZE detection with n=1743 keypoints in 452.612 ms
+org keypoints size: 1743
+Filtered keypoints size: 211
+New keypoints size: 211
+#2 : DETECT KEYPOINTS done
+AKAZE descriptor extraction in 85.8158 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/AKAZE0007.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+AKAZE detection with n=1817 keypoints in 441.372 ms
+org keypoints size: 1817
+Filtered keypoints size: 220
+New keypoints size: 220
+#2 : DETECT KEYPOINTS done
+AKAZE descriptor extraction in 82.0189 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/AKAZE0008.bmp
+Press key to continue to next image
+#1 : LOAD IMAGE INTO BUFFER done
+AKAZE detection with n=1817 keypoints in 440.414 ms
+org keypoints size: 1817
+Filtered keypoints size: 216
+New keypoints size: 216
+#2 : DETECT KEYPOINTS done
+AKAZE descriptor extraction in 80.4021 ms
+#3 : EXTRACT DESCRIPTORS done
+#4 : MATCH KEYPOINT DESCRIPTORS done
+/home/workspace/test/detector/AKAZE0009.bmp
+Press key to continue to next image
