@@ -98,10 +98,7 @@ int main(int argc, const char *argv[])
             detKeypointsModern(keypoints, imgGray, detectorType, false);
         }
         
-        for (auto it = keypoints.begin(); it != keypoints.end(); ++it)
-        {
-            cout << "Keypoint cordinates: " << it->pt.x << ", " << it->pt.y << endl;
-        }
+        
         //// EOF STUDENT ASSIGNMENT
 
         //// STUDENT ASSIGNMENT
@@ -113,6 +110,19 @@ int main(int argc, const char *argv[])
         if (bFocusOnVehicle)
         {
             // ...
+            for (auto it = keypoints.begin(); it != keypoints.end(); ++it)
+            {
+                
+                if (vehicleRect.contains(it->pt))
+                {
+                    cout << "VALID Keypoint cordinates: " << it->pt.x << ", " << it->pt.y << endl;
+                }
+                else
+                {
+                    cout << "INvalid Keypoint cordinates: " << it->pt.x << ", " << it->pt.y << endl;
+                }
+                
+            }
         }
 
         //// EOF STUDENT ASSIGNMENT
