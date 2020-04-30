@@ -25,9 +25,6 @@ int main(int argc, const char *argv[])
 {
 
     /* INIT VARIABLES AND DATA STRUCTURES */
-    // TEST Variables
-    ofstream writeTofile;
-    writeTofile.open("detector_result.txt");
 
     // data location
     string dataPath = "../";
@@ -75,7 +72,7 @@ int main(int argc, const char *argv[])
         }
 
         //// EOF STUDENT ASSIGNMENT
-        writeTofile << "#1 : LOAD IMAGE INTO BUFFER done" << endl;
+        cout << "#1 : LOAD IMAGE INTO BUFFER done" << endl;
 
         /* DETECT IMAGE KEYPOINTS */
 
@@ -96,16 +93,16 @@ int main(int argc, const char *argv[])
 
         if (detectorType.compare("SHITOMASI") == 0)
         {
-            detKeypointsShiTomasi(keypoints, imgGray, false, writeTofile);
+            detKeypointsShiTomasi(keypoints, imgGray, false);
         }
         else if (detectorType.compare("HARRIS") == 0)
         {
             //...
-            detKeypointsHarris(keypoints, imgGray, false, writeTofile);
+            detKeypointsHarris(keypoints, imgGray, false);
         }
         else
         {
-            detKeypointsModern(keypoints, imgGray, detectorType, false, writeTofile);
+            detKeypointsModern(keypoints, imgGray, detectorType, false);
         }
         
         
@@ -121,7 +118,7 @@ int main(int argc, const char *argv[])
         if (bFocusOnVehicle)
         {
             // ...
-            writeTofile << "org keypoints size: " << keypoints.size() << endl;
+            cout << "org keypoints size: " << keypoints.size() << endl;
             for (auto it = keypoints.begin(); it != keypoints.end(); ++it)
             {
                 
@@ -132,10 +129,10 @@ int main(int argc, const char *argv[])
                 
                 
             }
-            writeTofile << "Filtered keypoints size: " << fltrdKpts.size() << endl;
+            cout << "Filtered keypoints size: " << fltrdKpts.size() << endl;
         }
         keypoints = fltrdKpts;
-        writeTofile << "New keypoints size: " << keypoints.size() << endl;
+        cout << "New keypoints size: " << keypoints.size() << endl;
         //// EOF STUDENT ASSIGNMENT
 
         // optional : limit number of keypoints (helpful for debugging and learning)
@@ -228,6 +225,6 @@ int main(int argc, const char *argv[])
         }
 
     } // eof loop over all images
-    writeTofile.close();
+
     return 0;
 }
