@@ -107,15 +107,18 @@ int main(int argc, const char *argv[])
         // only keep keypoints on the preceding vehicle
         bool bFocusOnVehicle = true;
         cv::Rect vehicleRect(535, 180, 180, 150);
+        vector<cv::KeyPoint> fltrdKpts;
         if (bFocusOnVehicle)
         {
             // ...
+            cout << "org keypoints size: " << keypoints.size() << endl;
             for (auto it = keypoints.begin(); it != keypoints.end(); ++it)
             {
                 
                 if (vehicleRect.contains(it->pt))
                 {
                     cout << "VALID Keypoint cordinates: " << it->pt.x << ", " << it->pt.y << endl;
+                    fltrdKpts.push_back(*it);
                 }
                 else
                 {
@@ -123,8 +126,10 @@ int main(int argc, const char *argv[])
                 }
                 
             }
+            cout << "Filtered keypoints size: " << fltrdKpts.size() << endl;
+            fltrdKpts.swap(keypoints);
         }
-
+        cout << "New keypoints size: " << keypoints.size() << endl;
         //// EOF STUDENT ASSIGNMENT
 
         // optional : limit number of keypoints (helpful for debugging and learning)
