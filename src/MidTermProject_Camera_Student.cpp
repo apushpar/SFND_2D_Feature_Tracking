@@ -117,18 +117,14 @@ int main(int argc, const char *argv[])
                 
                 if (vehicleRect.contains(it->pt))
                 {
-                    cout << "VALID Keypoint cordinates: " << it->pt.x << ", " << it->pt.y << endl;
                     fltrdKpts.push_back(*it);
                 }
-                else
-                {
-                    cout << "INvalid Keypoint cordinates: " << it->pt.x << ", " << it->pt.y << endl;
-                }
+                
                 
             }
             cout << "Filtered keypoints size: " << fltrdKpts.size() << endl;
-            fltrdKpts.swap(keypoints);
         }
+        keypoints = fltrdKpts;
         cout << "New keypoints size: " << keypoints.size() << endl;
         //// EOF STUDENT ASSIGNMENT
 
