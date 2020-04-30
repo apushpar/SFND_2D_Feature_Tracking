@@ -19,6 +19,12 @@ void matchDescriptors(std::vector<cv::KeyPoint> &kPtsSource, std::vector<cv::Key
     else if (matcherType.compare("MAT_FLANN") == 0)
     {
         // ...
+        if (descSource.type() != CV_32F)
+        {
+            descSource.convertTo(descSource, CV_32F);
+            descRef.convertTo(descRef, CV_32F);
+        }
+        matcher = cv::FlannBasedMatcher::create();
     }
 
     // perform matching task
@@ -30,7 +36,21 @@ void matchDescriptors(std::vector<cv::KeyPoint> &kPtsSource, std::vector<cv::Key
     else if (selectorType.compare("SEL_KNN") == 0)
     { // k nearest neighbors (k=2)
 
-        // ...
+        vector<vector<cv::DMatch>> knnMatches;
+        int k = 2;
+        double compareRatio = 0.8;
+        matcher->knnMatch(descSource, descRef, knnMatches, k);
+
+        double ratio;
+        for (vector<cv::DMatch> matchArr : knnMatches)
+        {
+            ratio = matchArr[0].distance / matchArr[1].distance;
+            if (ratio >= compareRatio)
+            {
+                matches.push_back(matchArr[0]);
+            }
+        }
+
     }
 }
 
@@ -76,7 +96,7 @@ void descKeypoints(vector<cv::KeyPoint> &keypoints, cv::Mat &img, cv::Mat &descr
         float threshold = 0.001f;
         int nOctaves = 4;
         int nOctaveLayers = 4;
-        extractor = cv::AKAZE::create(cv::AKAZE::DESCRIPTOR_MLDB, descriptorSize, descriptorChannels, threshold, nOctaves, nOctaveLayers, cv::AKAZE::DIFF_PM_G2);
+        extractor = cv::AKAZE::create(cv::AKAZE::DESCRIPTOR_MLDB, descriptorSize, descriptorChannels, threshold, nOctaves, nOctaveLayers, cv::KAZE::DIFF_PM_G2);
 
     }
     else
@@ -229,9 +249,8 @@ void detKeypointsModern(vector<cv::KeyPoint> &keypoints, cv::Mat &img, string de
         int threshold = 30;
         int octaves = 3;
         float patternScale = 1.0f;
-        // cv::Ptr<cv::BRISK> detector = cv::BRISK::create(threshold, octaves, patternScale);
         detector = cv::BRISK::create(threshold, octaves, patternScale);
-        // detector->detect(img, keypoints);
+
     }
     else if (detectorType.compare("ORB") == 0)
     {
@@ -244,7 +263,6 @@ void detKeypointsModern(vector<cv::KeyPoint> &keypoints, cv::Mat &img, string de
         // cv::ORB::ScoreType scoreType = cv::ORB::HARRIS_SCORE;
         int patchSize = 31;
         int fastThreshold = 20;
-        // cv::Ptr<cv::ORB> detector = cv::ORB::create(nfeat, scaleFactor, nLevels, edgeThreshold, firstLevel, wta_k, cv::ORB::HARRIS_SCORE, patchSize, fastThreshold);
         detector = cv::ORB::create(nfeat, scaleFactor, nLevels, edgeThreshold, firstLevel, wta_k, cv::ORB::HARRIS_SCORE, patchSize, fastThreshold);
     }
     else if (detectorType.compare("AKAZE") == 0)
@@ -254,8 +272,7 @@ void detKeypointsModern(vector<cv::KeyPoint> &keypoints, cv::Mat &img, string de
         float threshold = 0.001f;
         int nOctaves = 4;
         int nOctaveLayers = 4;
-        // cv::Ptr<cv::KAZE> detector = cv::KAZE::create(extended, upright, threshold, nOctaves, nOctaveLayers);
-        detector = cv::KAZE::create(extended, upright, threshold, nOctaves, nOctaveLayers);
+        detector = cv::KAZE::create(extended, upright, threshold, nOctaves, nOctaveLayers); // CHECK
     }
     else
     {
