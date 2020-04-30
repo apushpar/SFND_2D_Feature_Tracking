@@ -39,8 +39,8 @@ int main(int argc, const char *argv[])
 
     // misc
     int dataBufferSize = 2;       // no. of images which are held in memory (ring buffer) at the same time
-    // vector<DataFrame> dataBuffer; // list of data frames which are held in memory at the same time
-    queue<DataFrame> dataBuffer; // list of data frames which are held in memory at the same time
+    vector<DataFrame> dataBuffer; // list of data frames which are held in memory at the same time
+    // queue<DataFrame> dataBuffer; // list of data frames which are held in memory at the same time
     bool bVis = false;            // visualize results
 
     /* MAIN LOOP OVER ALL IMAGES */
@@ -61,14 +61,14 @@ int main(int argc, const char *argv[])
 
         //// STUDENT ASSIGNMENT
         //// TASK MP.1 -> replace the following code with ring buffer of size dataBufferSize
-        // using a queue instead of a vector -> efficient way of removinf the first element if size of buffer greater than 2.
+        
         // push image into data frame buffer
         DataFrame frame;
         frame.cameraImg = imgGray;
-        dataBuffer.push(frame);
+        dataBuffer.push_back(frame);
         if (dataBuffer.size() > 2)
         {
-            dataBuffer.pop();
+            dataBuffer.erase(dataBuffer.begin());
         }
 
         //// EOF STUDENT ASSIGNMENT
@@ -98,7 +98,10 @@ int main(int argc, const char *argv[])
             detKeypointsModern(keypoints, imgGray, detectorType, false);
         }
         
-        
+        for (auto it = keypoints.begin(); it != keypoints.end(); ++it)
+        {
+            cout << "Keypoint cordinates: " << it->pt.x << ", " << it->pt.y << endl;
+        }
         //// EOF STUDENT ASSIGNMENT
 
         //// STUDENT ASSIGNMENT

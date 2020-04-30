@@ -177,12 +177,14 @@ void detKeypointsHarris(vector<cv::KeyPoint> &keypoints, cv::Mat &img, bool bVis
 void detKeypointsModern(vector<cv::KeyPoint> &keypoints, cv::Mat &img, string detectorType, bool bVis)
 {   
     double t = (double)cv::getTickCount();
+    cv::Ptr<cv::FeatureDetector> detector;
     if (detectorType.compare("FAST") == 0)
     {
         int threshold = 30;
         bool nms = true;
-        cv::Ptr<cv::FastFeatureDetector> detector = cv::FastFeatureDetector::create(threshold, nms, cv::FastFeatureDetector::TYPE_9_16);
-        detector->detect(img, keypoints);
+        // cv::Ptr<cv::FastFeatureDetector> detector = cv::FastFeatureDetector::create(threshold, nms, cv::FastFeatureDetector::TYPE_9_16);
+        detector = cv::FastFeatureDetector::create(threshold, nms, cv::FastFeatureDetector::TYPE_9_16);
+        // detector->detect(img, keypoints);
         // cv::FAST(img, keypoints, threshold, nms, cv::FastFeatureDetector::TYPE_9_16);
         
     }
@@ -191,8 +193,9 @@ void detKeypointsModern(vector<cv::KeyPoint> &keypoints, cv::Mat &img, string de
         int threshold = 30;
         int octaves = 3;
         float patternScale = 1.0f;
-        cv::Ptr<cv::BRISK> detector = cv::BRISK::create(threshold, octaves, patternScale);
-        detector->detect(img, keypoints);
+        // cv::Ptr<cv::BRISK> detector = cv::BRISK::create(threshold, octaves, patternScale);
+        detector = cv::BRISK::create(threshold, octaves, patternScale);
+        // detector->detect(img, keypoints);
     }
     else if (detectorType.compare("ORB") == 0)
     {
@@ -205,17 +208,27 @@ void detKeypointsModern(vector<cv::KeyPoint> &keypoints, cv::Mat &img, string de
         // cv::ORB::ScoreType scoreType = cv::ORB::HARRIS_SCORE;
         int patchSize = 31;
         int fastThreshold = 20;
-        cv::Ptr<cv::ORB> detector = cv::ORB::create(nfeat, scaleFactor, nLevels, edgeThreshold, firstLevel, wta_k, cv::ORB::HARRIS_SCORE, patchSize, fastThreshold);
+        // cv::Ptr<cv::ORB> detector = cv::ORB::create(nfeat, scaleFactor, nLevels, edgeThreshold, firstLevel, wta_k, cv::ORB::HARRIS_SCORE, patchSize, fastThreshold);
+        detector = cv::ORB::create(nfeat, scaleFactor, nLevels, edgeThreshold, firstLevel, wta_k, cv::ORB::HARRIS_SCORE, patchSize, fastThreshold);
     }
     else if (detectorType.compare("AKAZE") == 0)
     {
-
+        bool extended = false;
+        bool upright = false;
+        float threshold = 0.001f;
+        int nOctaves = 4;
+        int nOctaveLayers = 4;
+        // cv::Ptr<cv::KAZE> detector = cv::KAZE::create(extended, upright, threshold, nOctaves, nOctaveLayers);
+        detector = cv::KAZE::create(extended, upright, threshold, nOctaves, nOctaveLayers);
     }
     else
     {
         // SIFT
+        detector = cv::xfeatures2d::SIFT::create();
+
 
     }
+    detector->detect(img, keypoints);
     t = ((double)cv::getTickCount() - t) / cv::getTickFrequency();
     cout << detectorType << " detection with n=" << keypoints.size() << " keypoints in " << 1000 * t / 1.0 << " ms" << endl;
     // visualize results
