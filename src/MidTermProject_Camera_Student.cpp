@@ -25,6 +25,9 @@ int main(int argc, const char *argv[])
 {
 
     /* INIT VARIABLES AND DATA STRUCTURES */
+    // TEST Variables
+    ofstream writeTofile;
+    writeTofile.open("detector_result.txt");
 
     // data location
     string dataPath = "../";
@@ -72,19 +75,19 @@ int main(int argc, const char *argv[])
         }
 
         //// EOF STUDENT ASSIGNMENT
-        cout << "#1 : LOAD IMAGE INTO BUFFER done" << endl;
+        writeTofile << "#1 : LOAD IMAGE INTO BUFFER done" << endl;
 
         /* DETECT IMAGE KEYPOINTS */
 
         // extract 2D keypoints from current image
         vector<cv::KeyPoint> keypoints; // create empty feature list for current image
-        // string detectorType = "SHITOMASI";
+        string detectorType = "SHITOMASI";
         // string detectorType = "HARRIS";
         // string detectorType = "FAST";
         // string detectorType = "BRISK";
         // string detectorType = "ORB";
         // string detectorType = "AKAZE";
-        string detectorType = "SIFT";
+        // string detectorType = "SIFT";
 
 
         //// STUDENT ASSIGNMENT
@@ -118,7 +121,7 @@ int main(int argc, const char *argv[])
         if (bFocusOnVehicle)
         {
             // ...
-            cout << "org keypoints size: " << keypoints.size() << endl;
+            writeTofile << "org keypoints size: " << keypoints.size() << endl;
             for (auto it = keypoints.begin(); it != keypoints.end(); ++it)
             {
                 
@@ -129,10 +132,10 @@ int main(int argc, const char *argv[])
                 
                 
             }
-            cout << "Filtered keypoints size: " << fltrdKpts.size() << endl;
+            writeTofile << "Filtered keypoints size: " << fltrdKpts.size() << endl;
         }
         keypoints = fltrdKpts;
-        cout << "New keypoints size: " << keypoints.size() << endl;
+        writeTofile << "New keypoints size: " << keypoints.size() << endl;
         //// EOF STUDENT ASSIGNMENT
 
         // optional : limit number of keypoints (helpful for debugging and learning)
@@ -211,14 +214,20 @@ int main(int argc, const char *argv[])
 
                 string windowName = "Matching keypoints between two camera images";
                 cv::namedWindow(windowName, 7);
-                cv::imshow(windowName, matchImg);
+                // cv::imshow(windowName, matchImg);
+
+                // TESTING
+                string saveFolder = "/detector/";
+                string saveName = saveFolder + detectorType + imgNumber.str() + imgFileType;
+                cv::imwrite(saveName, matchImg);
+
                 cout << "Press key to continue to next image" << endl;
-                cv::waitKey(0); // wait for key to be pressed
+                // cv::waitKey(0); // wait for key to be pressed
             }
             bVis = false;
         }
 
     } // eof loop over all images
-
+    writeTofile.close();
     return 0;
 }
