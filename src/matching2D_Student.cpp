@@ -116,8 +116,8 @@ void descKeypoints(vector<cv::KeyPoint> &keypoints, cv::Mat &img, cv::Mat &descr
     double t = (double)cv::getTickCount();
     extractor->compute(img, keypoints, descriptors);
     t = ((double)cv::getTickCount() - t) / cv::getTickFrequency();
-    // cout << descriptorType << " descriptor extraction in " << 1000 * t / 1.0 << " ms" << endl;
-    cout << 1000 * t / 1.0 << ",";
+    cout << descriptorType << " descriptor extraction in " << 1000 * t / 1.0 << " ms" << endl;
+    // cout << 1000 * t / 1.0 << ",";
 }
 
 void visualizeResults(cv::Mat img, vector<cv::KeyPoint> &keypoints, string name)
@@ -157,8 +157,8 @@ void detKeypointsShiTomasi(vector<cv::KeyPoint> &keypoints, cv::Mat &img, bool b
         keypoints.push_back(newKeyPoint);
     }
     t = ((double)cv::getTickCount() - t) / cv::getTickFrequency();
-    // cout << "Shi-Tomasi codetection with n=" << keypoints.size() << " keypoints in " << 1000 * t / 1.0 << " ms" << endl;
-    cout << 1000 * t / 1.0 << ",";
+    cout << "Shi-Tomasi codetection with n=" << keypoints.size() << " keypoints in " << 1000 * t / 1.0 << " ms" << endl;
+    // cout << 1000 * t / 1.0 << ",";
     // visualize results
     if (bVis)
     {
@@ -220,8 +220,8 @@ void detKeypointsHarris(vector<cv::KeyPoint> &keypoints, cv::Mat &img, bool bVis
         }
     }
     t = ((double)cv::getTickCount() - t) / cv::getTickFrequency();
-    // cout << "Harris detection with n=" << keypoints.size() << " keypoints in " << 1000 * t / 1.0 << " ms" << endl;
-    cout << 1000 * t / 1.0 << ",";
+    cout << "Harris detection with n=" << keypoints.size() << " keypoints in " << 1000 * t / 1.0 << " ms" << endl;
+    // cout << 1000 * t / 1.0 << ",";
     // visualize results
     if (bVis)
     {
@@ -285,8 +285,8 @@ void detKeypointsModern(vector<cv::KeyPoint> &keypoints, cv::Mat &img, string de
     }
     detector->detect(img, keypoints);
     t = ((double)cv::getTickCount() - t) / cv::getTickFrequency();
-    // cout << detectorType << " detection with n=" << keypoints.size() << " keypoints in " << 1000 * t / 1.0 << " ms" << endl;
-    cout << 1000 * t / 1.0 << ",";
+    cout << detectorType << " detection with n=" << keypoints.size() << " keypoints in " << 1000 * t / 1.0 << " ms" << endl;
+    // cout << 1000 * t / 1.0 << ",";
     // visualize results
     if (bVis)
     {
