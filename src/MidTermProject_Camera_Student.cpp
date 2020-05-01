@@ -21,7 +21,8 @@
 using namespace std;
 
 /* MAIN PROGRAM */
-int main(int argc, const char *argv[])
+// int main(int argc, const char *argv[])
+void project(string detectorType, string descriptorType)
 {
 
     /* INIT VARIABLES AND DATA STRUCTURES */
@@ -72,13 +73,13 @@ int main(int argc, const char *argv[])
         }
 
         //// EOF STUDENT ASSIGNMENT
-        cout << "#1 : LOAD IMAGE INTO BUFFER done" << endl;
+        // cout << "#1 : LOAD IMAGE INTO BUFFER done" << endl;
 
         /* DETECT IMAGE KEYPOINTS */
 
         // extract 2D keypoints from current image
         vector<cv::KeyPoint> keypoints; // create empty feature list for current image
-        string detectorType = "SHITOMASI";
+        // string detectorType = "SHITOMASI";
         // string detectorType = "HARRIS";
         // string detectorType = "FAST";
         // string detectorType = "BRISK";
@@ -90,7 +91,7 @@ int main(int argc, const char *argv[])
         //// STUDENT ASSIGNMENT
         //// TASK MP.2 -> add the following keypoint detectors in file matching2D.cpp and enable string-based selection based on detectorType
         //// -> HARRIS, FAST, BRISK, ORB, AKAZE, SIFT
-
+        cout << detectorType << ",";
         if (detectorType.compare("SHITOMASI") == 0)
         {
             detKeypointsShiTomasi(keypoints, imgGray, false);
@@ -104,7 +105,7 @@ int main(int argc, const char *argv[])
         {
             detKeypointsModern(keypoints, imgGray, detectorType, false);
         }
-        
+        int keypointSize = keypoints.size();
         
         //// EOF STUDENT ASSIGNMENT
 
@@ -118,7 +119,7 @@ int main(int argc, const char *argv[])
         if (bFocusOnVehicle)
         {
             // ...
-            cout << "org keypoints size: " << keypoints.size() << endl;
+            // cout << "org keypoints size: " << keypoints.size() << endl;
             for (auto it = keypoints.begin(); it != keypoints.end(); ++it)
             {
                 
@@ -129,10 +130,12 @@ int main(int argc, const char *argv[])
                 
                 
             }
-            cout << "Filtered keypoints size: " << fltrdKpts.size() << endl;
+            // cout << "Filtered keypoints size: " << fltrdKpts.size() << endl;
         }
         keypoints = fltrdKpts;
-        cout << "New keypoints size: " << keypoints.size() << endl;
+        int newkeypointSize = fltrdKpts.size();
+        cout << keypointSize << "," << newkeypointSize << ",";
+        // cout << "New keypoints size: " << keypoints.size() << endl;
         //// EOF STUDENT ASSIGNMENT
 
         // optional : limit number of keypoints (helpful for debugging and learning)
@@ -146,12 +149,12 @@ int main(int argc, const char *argv[])
                 keypoints.erase(keypoints.begin() + maxKeypoints, keypoints.end());
             }
             cv::KeyPointsFilter::retainBest(keypoints, maxKeypoints);
-            cout << " NOTE: Keypoints have been limited!" << endl;
+            // cout << " NOTE: Keypoints have been limited!" << endl;
         }
 
         // push keypoints and descriptor for current frame to end of data buffer
         (dataBuffer.end() - 1)->keypoints = keypoints;
-        cout << "#2 : DETECT KEYPOINTS done" << endl;
+        // cout << "#2 : DETECT KEYPOINTS done" << endl;
 
         /* EXTRACT KEYPOINT DESCRIPTORS */
 
@@ -160,11 +163,12 @@ int main(int argc, const char *argv[])
         //// -> BRIEF, ORB, FREAK, AKAZE, SIFT
 
         cv::Mat descriptors;
-        string descriptorType = "BRISK"; // BRIEF, ORB, FREAK, AKAZE, SIFT
+        // string descriptorType = "BRISK"; // BRIEF, ORB, FREAK, AKAZE, SIFT
         // string descriptorType = "ORB";
         // string descriptorType = "FREAK";
         // string descriptorType = "AKAZE";
         // string descriptorType = "SIFT";
+        cout << descriptorType << ",";
         descKeypoints((dataBuffer.end() - 1)->keypoints, (dataBuffer.end() - 1)->cameraImg, descriptors, descriptorType);
         //// EOF STUDENT ASSIGNMENT
 
@@ -180,9 +184,10 @@ int main(int argc, const char *argv[])
 
             vector<cv::DMatch> matches;
             string matcherType = "MAT_BF";        // MAT_BF, MAT_FLANN
-            string descriptorType = "DES_BINARY"; // DES_BINARY, DES_HOG
-            string selectorType = "SEL_NN";       // SEL_NN, SEL_KNN
-
+            // string matcherType = "MAT_FLANN";
+            // string descriptorType = "DES_BINARY"; // DES_BINARY, DES_HOG
+            // string selectorType = "SEL_NN";       // SEL_NN, SEL_KNN
+            string selectorType = "SEL_KNN";
             //// STUDENT ASSIGNMENT
             //// TASK MP.5 -> add FLANN matching in file matching2D.cpp
             //// TASK MP.6 -> add KNN match selection and perform descriptor distance ratio filtering with t=0.8 in file matching2D.cpp
@@ -192,11 +197,11 @@ int main(int argc, const char *argv[])
                              matches, descriptorType, matcherType, selectorType);
 
             //// EOF STUDENT ASSIGNMENT
-
+            int matchesSize = matches.size();
             // store matches in current data frame
             (dataBuffer.end() - 1)->kptMatches = matches;
-
-            cout << "#4 : MATCH KEYPOINT DESCRIPTORS done" << endl;
+            cout << matchesSize << ",";
+            // cout << "#4 : MATCH KEYPOINT DESCRIPTORS done" << endl;
 
             // visualize matches between current and previous image
             bVis = true;
@@ -215,10 +220,10 @@ int main(int argc, const char *argv[])
 
                 // TESTING
                 string saveFolder = "/detector/";
-                string saveName = saveFolder + detectorType + imgNumber.str() + imgFileType;
+                string saveName = saveFolder + detectorType + "_" + descriptorType + "_" + imgNumber.str() + imgFileType;
                 cv::imwrite(saveName, matchImg);
 
-                cout << "Press key to continue to next image" << endl;
+                // cout << "Press key to continue to next image" << endl;
                 // cv::waitKey(0); // wait for key to be pressed
             }
             bVis = false;
@@ -226,5 +231,5 @@ int main(int argc, const char *argv[])
 
     } // eof loop over all images
 
-    return 0;
+    // return 0;
 }
