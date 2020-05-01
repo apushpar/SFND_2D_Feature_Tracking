@@ -175,7 +175,7 @@ void project(string detectorType, string descriptorType)
         // push descriptors for current frame to end of data buffer
         (dataBuffer.end() - 1)->descriptors = descriptors;
 
-        cout << "#3 : EXTRACT DESCRIPTORS done" << endl;
+        // cout << "#3 : EXTRACT DESCRIPTORS done" << endl;
 
         if (dataBuffer.size() > 1) // wait until at least two images have been processed
         {
@@ -200,7 +200,7 @@ void project(string detectorType, string descriptorType)
             int matchesSize = matches.size();
             // store matches in current data frame
             (dataBuffer.end() - 1)->kptMatches = matches;
-            cout << matchesSize << ",";
+            cout << matchesSize << endl;
             // cout << "#4 : MATCH KEYPOINT DESCRIPTORS done" << endl;
 
             // visualize matches between current and previous image
@@ -215,16 +215,16 @@ void project(string detectorType, string descriptorType)
                                 vector<char>(), cv::DrawMatchesFlags::DRAW_RICH_KEYPOINTS);
 
                 string windowName = "Matching keypoints between two camera images";
-                cv::namedWindow(windowName, 7);
+                // cv::namedWindow(windowName, 7);
                 // cv::imshow(windowName, matchImg);
 
                 // TESTING
-                string saveFolder = "/detector/";
+                string saveFolder = "/home/workspace/test2/SFND_2D_Feature_Tracking/det_desc/";
                 string saveName = saveFolder + detectorType + "_" + descriptorType + "_" + imgNumber.str() + imgFileType;
                 cv::imwrite(saveName, matchImg);
 
                 // cout << "Press key to continue to next image" << endl;
-                // cv::waitKey(0); // wait for key to be pressed
+                cv::waitKey(0); // wait for key to be pressed
             }
             bVis = false;
         }
